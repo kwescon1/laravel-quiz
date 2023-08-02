@@ -63,6 +63,10 @@
                                             {{ $quiz->description }}
                                         </td>
                                         <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
+                                            {{-- [tl! add:start --}}
+                                            {{ $quiz->questions_count }}
+                                        </td>
+                                        <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
                                             <input class="disabled:opacity-50 disabled:cursor-not-allowed"
                                                 type="checkbox" disabled @checked($quiz->published)>
                                         </td>

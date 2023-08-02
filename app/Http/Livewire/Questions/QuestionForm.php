@@ -3,9 +3,9 @@
 namespace App\Http\Livewire\Questions;
 
 use App\Models\Question;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use Livewire\Component;
+use Livewire\Redirector;
 
 class QuestionForm extends Component
 {
@@ -46,7 +46,7 @@ class QuestionForm extends Component
         $this->questionOptions = array_values(($this->questionOptions));
     }
 
-    public function save(): RedirectResponse
+    public function save(): ?Redirector
     {
         $this->validate();
 
